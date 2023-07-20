@@ -1,14 +1,20 @@
+:root{
+    --white:rgb(255, 249, 230);
+    --brown:rgb(43, 30, 14);
+    --yellow:rgb(209,167,64);
+}
+
 *{
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .center{
     margin:0 auto;
 }
 .shadow{
     
-    box-shadow: 2px 0px 20px 5px rgba(112, 108, 83, 0.788);
+    box-shadow:1px 2px 8px rgba(184, 179, 152, 0.788);
 }
 .container{
     height: 100vh;
@@ -38,17 +44,19 @@
 }
 .hero > h1{
     font-family: "Kablammo", sans-serif;
-    font-size: 40px;
-    
+    font-size: 80px;
     margin-top: 20%;
     width: 100%;
-    color: rgb(163, 134, 39);
-    padding:5% 42%;
+    color: var(--white);
+    padding:0 20%;
     background-color: rgba(0, 0, 0, 0.158);
 }
 .hero >p >a{
     font-size: small;
     color:rgb(126, 122, 122);
+}
+.hero >p >a:hover{
+ color: var(--white);
 }
 
 .form{
@@ -63,14 +71,38 @@
 }
 .form >*{
     padding: 0 10%;
+    color:var(--brown);
 }
-.form > .form-container{
+form > .form-container{
+    padding: 30px 10px;
+    width: 98%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    border-radius: 5px;
     color: rgb(88, 90, 82);
-    background-color: rgba(187, 174, 116, 0.479);
-    height: max-content;
+    
 }
-.form >button{
-    background-color:rgb(153, 126, 59);
+label{
+    overflow-wrap:initial;
+    height: 20px;
+    font-size: 12px;
+}
+input{
+    width: 180px;
+    height: 30px;
+}
+.form-container> div{
+    
+    height: 50px;
+    width: 20%;
+}
+
+form >button{
+    background-color:var(--brown);
     width: fit-content;
     height: 7%;
     margin-left: 10%;
