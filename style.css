@@ -9,6 +9,7 @@
     box-sizing: border-box;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 .center{
     margin:0 auto;
 }
@@ -16,7 +17,7 @@
     
     box-shadow:1px 2px 8px rgba(184, 179, 152, 0.788);
 }
-.container{
+body{
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -27,9 +28,10 @@
 }
 
 .hero{
-    flex:1;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
+    width: 450px;
     height: 100%;
     background-image: url(./assets/background.jpg);
     background-size: cover;
@@ -59,32 +61,53 @@
  color: var(--white);
 }
 
-.form{
-    flex: 1.8;
+.content{
+    flex: 1;
     display: flex;
     height: 70%;
     flex-direction: column;
     align-self:center;
-   
+   gap: 15px;
     justify-content: space-evenly;
 
 }
-.form >*{
+h3{
+    font-weight: 600;
+}
+.content >*{
     padding: 0 10%;
     color:var(--brown);
 }
-form > .form-container{
-    padding: 30px 10px;
-    width: 98%;
-    height: 30vh;
+.holder{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    gap: 16px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.form-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 30px;
+    width: 98%;
+    min-height: 30vh;
     margin: 0 auto;
     border-radius: 5px;
     color: rgb(88, 90, 82);
     
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    min-width: 200px;
 }
 label{
     overflow-wrap:initial;
@@ -92,16 +115,22 @@ label{
     font-size: 12px;
 }
 input{
+    border: 1px solid gray;
+    border-radius: 5px;
     width: 180px;
     height: 30px;
 }
-.form-container> div{
-    
-    height: 50px;
-    width: 20%;
+input:valid{
+    border-color: rgb(89, 212, 130);
+    border-radius: 5px;
 }
-
+input:invalid{
+    border-color: rgb(212, 89, 89);
+    border-radius: 5px;
+}
 form >button{
+    display: flex;
+    align-items: center;
     background-color:var(--brown);
     width: fit-content;
     height: 7%;
@@ -109,8 +138,9 @@ form >button{
     border-radius: 5px;
     border:none;
     color: aliceblue;
-    font-size: 17px;
+    font-size: 15px;
+    padding: 15px;
 }
-.form > p >a{
+.content > p >a{
     color: rgb(209,167,64);
 }
